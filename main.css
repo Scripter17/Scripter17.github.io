@@ -3,30 +3,57 @@ body{
 }
 #Header{
 	display:inline-block;
-	width:80%;
+	width:80%; /* Fallback width, in case the user doesn't support calc() */
 	width:calc(80% - 1em);
-	background-color:#FF7777;
+	margin-bottom:0;
 	margin-left:-8px;
 	padding-left:1em;
+	background-color:#FF7777;
 	color:white;
 	text-shadow:0 0 1px rgba(100,0,0,0.5);
-	margin-bottom:0;
+	clip-path:polygon(0% 0%, 100% 0%, 100% calc(100% - 0.25em), calc(100% - 0.25em) 100%, 0% 100%); /* Not supported in IE/Edge */
 }
 #Sidebar{
-	width:15%;
-	margin-left:-8px;
-	background-color:#FFEECC;
     position: sticky;
     top: 0;
+	width:15%;
+	margin-left:-8px;
+	padding-bottom:0.5em;
+	background-color:#FFEECC;
+	text-align:center;
+	word-break:break-word;
 }
 #Sidebar > ul{
-	margin-top:0;
+	margin:0;
+	text-align:left;
+}
+.spacer-2em{
+	height:2em;
 }
 div.content{
 	width:69%; /* Laugh all you want, this is the best width for this */
 	margin:auto;
-	background-color:#ECE7EF;
 	padding:0.5em;
+	background-color:#ECE7EF;
 	color:#101010;
 	border-radius:4px;
+}
+a{
+	text-decoration:none;
+	color:blue;
+}
+a:hover{
+	text-decoration:underline;
+}
+a:active{
+	color:red;
+}
+h2{
+	margin-top:0.25em;
+}
+h2 > a{
+	display:none;
+}
+h2:hover > a{
+	display:inline;
 }
