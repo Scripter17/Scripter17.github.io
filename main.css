@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Patua+One');
 body{
-	background-color:#222222;
-	color:#24EE24;
-	font-family: 'Roboto', sans-serif;
+	background-color:#FCF7FF;
 }
-div.section{
-	background-color: #111111;
-	padding: 3px 15px 4px 15px;
-	margin: 12px;
-	border-radius: 3px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+#Header{
+	display:inline-block;
+	width:80%;
+	width:calc(80% - 1em);
+	background-color:#FF7777;
+	margin-left:-8px;
+	padding-left:1em;
+	color:white;
+	text-shadow:0 0 1px rgba(100,0,0,0.5);
+	margin-bottom:0;
 }
-h1{
-	text-align: center;
-	font-family: 'Patua One', cursive;
-	font-weight: 300;
+#Sidebar{
+	width:15%;
+	margin-left:-8px;
+	background-color:#FFEECC;
+    position: sticky;
+    top: 0;
 }
-h2{
-	font-weight: 400;
-	margin-bottom:10px;
+#Sidebar > ul{
+	margin-top:0;
 }
-a{
-	color:#003fff;
-	text-decoration:none;
-}
-a:hover{
-	text-decoration:underline;
-}
-a:active{
-	color:red;
+div.content{
+	width:69%; /* Laugh all you want, this is the best width for this */
+	margin:auto;
+	background-color:#ECE7EF;
+	padding:0.5em;
+	color:#101010;
+	border-radius:4px;
 }
