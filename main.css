@@ -1,12 +1,17 @@
 body{
 	background-color:#FCF7FF;
+	margin-top:0;
+}
+#Top{
+	height:2em;
 }
 #Header{
-	display:inline-block;
+	display:block;
 	width:80%; /* Fallback width, in case the user doesn't support calc() */
 	width:calc(80% - 1em);
 	margin-bottom:0;
 	margin-left:-8px;
+	margin-top:0;
 	padding-left:1em;
 	background-color:#FF7777;
 	color:white;
@@ -32,7 +37,7 @@ body{
 }
 div.content{
 	width:69%; /* Laugh all you want, this is the best width for this */
-	margin:auto;
+	margin:2em auto 1em auto;
 	padding:0.5em;
 	background-color:#ECE7EF;
 	color:#101010;
@@ -56,4 +61,7 @@ h2 > a{
 }
 h2:hover > a{
 	display:inline;
+}
+.info{
+	cursor:help;
 }
