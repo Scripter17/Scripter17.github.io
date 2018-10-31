@@ -32,16 +32,14 @@ body{
 	margin:0;
 	text-align:left;
 }
-.spacer-2em{
-	height:2em;
-}
 div.content{
 	width:69%; /* Laugh all you want, this is the best width for this */
 	margin:2em auto 1em auto;
 	padding:0.5em;
-	background-color:#ECE7EF;
+	background-color:#EEE9F1;
 	color:#101010;
 	border-radius:4px;
+	box-shadow:2px 3px 1px rgba(0,0,0,0.15)
 }
 a{
 	text-decoration:none;
