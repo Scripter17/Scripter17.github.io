@@ -1,6 +1,7 @@
 body{
 	background-color:#FCF7FF;
 	margin-top:0;
+	padding-bottom:50vh;
 }
 #Top{
 	height:2em;
@@ -20,13 +21,16 @@ body{
 }
 #Sidebar{
     position: sticky;
-    top: 0;
+    top:0;
 	width:15%;
 	margin-left:-8px;
 	padding-bottom:0.5em;
 	background-color:#FFEECC;
 	text-align:center;
 	word-break:break-word;
+}
+ul{
+	margin-bottom:0;
 }
 #Sidebar > ul{
 	margin:0;
@@ -38,8 +42,8 @@ div.content{
 	padding:0.5em;
 	background-color:#EEE9F1;
 	color:#101010;
-	border-radius:4px;
-	box-shadow:2px 3px 1px rgba(0,0,0,0.15)
+	border-radius:2px;
+	box-shadow:2px 3px 2px rgba(16,16,16,0.1);
 }
 a{
 	text-decoration:none;
@@ -62,4 +66,21 @@ h2:hover > a{
 }
 .info{
 	cursor:help;
+}
+
+::-webkit-scrollbar{
+	width:10px;
+	height:10px;
+}
+::-webkit-scrollbar-thumb{
+	background-color:#D0D0D0;
+}
+::-webkit-scrollbar-thumb:active{
+	background-color:#C8C8C8;
+}
+::-webkit-scrollbar-track{
+	background-color:#FCF7FF;
+}
+::-webkit-scrollbar-corner{
+	background-color:transparent;
 }
