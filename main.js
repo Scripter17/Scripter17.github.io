@@ -18,7 +18,7 @@ window.onkeydown=function(e){
 			}
 			// If the current active element is a link in the sidebar, then scroll back to where it was 1 frame ago
 			if (id=="Sidebar"){
-				window.scrollTo(0, ofsYPre)
+				window.scrollTo(0, ofsYPre);
 			}
 		})
 	}
