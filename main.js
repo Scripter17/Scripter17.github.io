@@ -1,7 +1,9 @@
 // Normally, when you press [tab] when a link in the sidebar is active, the window scrolls to the top. (It's a bug with position:sticky)
 // This script prevents that, albeit with a bit of spaghetti.
 window.onkeydown=function(e){
-	var ofsYPre, id, ua;
+	var ofsYPre, // How far down the screen is scrolled before the active element scrolls into view
+		id, // The id of the active element's Great Grandparent
+		ua; // userAgent
 	// https://jsfiddle.net/alvaroAV/svvz7tkn/
 	ua=navigator.userAgent;
 	if (e.keyCode==9 && !(ua.indexOf("MSIE ")>-1 || ua.indexOf("Trident/")>-1)){ // keyCode 9 is [tab]
