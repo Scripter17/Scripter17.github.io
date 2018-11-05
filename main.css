@@ -2,10 +2,15 @@ body{
 	background-color:#FCF7FF;
 	margin-top:0;
 	padding-bottom:20vh;
+	padding-top:2em;
 }
-#Top{
-	height:2em;
-}
+
+::-webkit-scrollbar{width:10px; height:10px;}
+::-webkit-scrollbar-thumb{background-color:#D0D0D0;}
+::-webkit-scrollbar-thumb:active{background-color:#C0C0C0;}
+::-webkit-scrollbar-track{background-color:#FCF7FF;}
+::-webkit-scrollbar-corner{background-color:transparent;}
+
 #Header{
 	display:block;
 	width:80%; /* Fallback width, in case the user doesn't support calc() */
@@ -30,62 +35,36 @@ body{
 	word-break:break-word;
 	overflow:auto;
 }
-ul{
-	margin-bottom:0;
-}
-#Sidebar > ul{
-	margin:0;
-	text-align:left;
-}
+#Sidebar > ul{margin:0; text-align:left;}
+
+ul{margin-bottom:0;}
+h2{margin-top:0.25em;}
+a{text-decoration:none; color:blue;}
+a:hover{text-decoration:underline;}
+a:active{color:red;}
+
 div.content{
 	width:69%; /* Laugh all you want, this is the best width for this */
 	margin:2em auto 1em auto;
 	padding:0.5em;
+	padding-bottom:1em;
 	background-color:#EEE9F1;
 	color:#101010;
 	border-radius:2px;
 	box-shadow:2px 3px 2px rgba(16,16,16,0.1);
 }
-a{
-	text-decoration:none;
-	color:blue;
-}
-a:hover{
-	text-decoration:underline;
-}
-a:active{
-	color:red;
-}
-h2{
-	margin-top:0.25em;
-}
+div.content > p:last-child{margin-bottom:0;}
+
 h2 > a{
 	display:none;
 	outline:none;
 	padding:0 6px 0 6px;
 	margin:0 -6px 0 -6px;
 }
-h2:hover > a{
-	display:inline;
-}
+h2:hover > a{display:inline;}
+
 .info{
 	cursor:help;
 	padding:0 4px 0 4px;
 	margin:0 -4px 0 -4px;
-}
-::-webkit-scrollbar{
-	width:10px;
-	height:10px;
-}
-::-webkit-scrollbar-thumb{
-	background-color:#D0D0D0;
-}
-::-webkit-scrollbar-thumb:active{
-	background-color:#C0C0C0;
-}
-::-webkit-scrollbar-track{
-	background-color:#FCF7FF;
-}
-::-webkit-scrollbar-corner{
-	background-color:transparent;
 }
