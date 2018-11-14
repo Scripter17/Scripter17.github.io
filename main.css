@@ -23,6 +23,9 @@ body{
 	text-shadow:0 0 1px rgba(100,0,0,0.5);
 	clip-path:polygon(0% 0%, 100% 0%, 100% calc(100% - 0.25em), calc(100% - 0.25em) 100%, 0% 100%); /* Not supported in IE/Edge */
 }
+#Header > a{
+	color:white;
+}
 #Sidebar{
     position: sticky;
 	display:inline-block;
@@ -33,14 +36,17 @@ body{
 	background-color:#FFEECC;
 	text-align:center;
 	overflow:visible;
+	float:left;
 }
 #Sidebar > ul{margin:0; text-align:left;}
 #Sidebar a{margin-right:1em;}
 ul{margin-bottom:0;}
 h2{margin-top:0.25em;}
 a{text-decoration:none; color:blue;}
+h1 a{text-decoration:none; color:#0066CC;}
 a:hover{text-decoration:underline;}
-a:active{color:red;}
+a:active{color:#ff1600;}
+h1 a:active{color:red;}
 
 div.content{
 	width:69%; /* Laugh all you want, this is the best width for this */
@@ -62,6 +68,12 @@ h2 > a{
 	margin:0 -6px 0 -6px;
 }
 h2:hover > a{display:inline;}
+
+code{
+	margin:0 0.25em 0 0.25em;
+	padding:0 0.5em 0 0.5em;
+	background-color:rgba(32,32,32,0.1)
+}
 
 .info{
 	cursor:help;
