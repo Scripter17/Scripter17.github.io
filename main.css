@@ -1,6 +1,6 @@
 body{
 	background-color:#F7F7F7;
-	margin-top:0;
+	margin:0;
 	padding-top:2em;
 }
 
@@ -12,10 +12,11 @@ body{
 
 #Header{
 	display:block;
-	width:80%; /* Fallback width, in case the user doesn't support calc() */
-	width:calc(80% - 1em);
+	width:80%;
+	width:80vw;
+	/*width:calc(80% - 1em);/**/
 	margin-bottom:0;
-	margin-left:-8px;
+	margin-left:0;
 	margin-top:0;
 	padding-left:1em;
 	background-color:#FF7777;
@@ -30,8 +31,8 @@ body{
     position: sticky;
 	display:inline-block;
     top:0;
-	min-width:15%;
-	margin-left:-8px;
+	width:15%;
+	margin-left:0;
 	padding-bottom:0.5em;
 	background-color:#FFEECC;
 	text-align:center;
@@ -49,7 +50,7 @@ a:active{color:#ff1600;}
 h1 a:active{color:red;}
 
 div.content{
-	width:69%; /* Laugh all you want, this is the best width for this */
+	width:80%;
 	margin:2em auto 1em auto;
 	padding:0.5em;
 	padding-bottom:1em;
@@ -59,6 +60,8 @@ div.content{
 	box-shadow:2px 3px 2px rgba(16,16,16,0.1);
 	border:1px solid #EDECF1;
 }
+/* Absolute shenanigans, but it works */
+#Sidebar ~ div.content{width:65%;}
 div.content > p:last-child{margin-bottom:0;}
 
 h2 > a{
@@ -80,6 +83,7 @@ code{
 	padding:0 4px 0 4px;
 	margin:0 -4px 0 -4px;
 }
+
 #terribleJoke{
 	margin-top:20vh;
 	margin-bottom:0;
