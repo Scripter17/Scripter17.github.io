@@ -1,0 +1,12 @@
+#navbar{
+	display:flex;
+	width:80%;
+	margin:auto;
+}
+#navbar a{
+	flex-grow:1;
+	font-size:1.2em;
+	color:white;
+	background-color:#703d3d;
+	padding:4px;
+}

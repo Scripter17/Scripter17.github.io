@@ -1,93 +1,95 @@
 body{
-	background-color:#F7F7F7;
-	margin:0;
-	padding-top:2em;
-}
-
-::-webkit-scrollbar{width:10px; height:10px;}
-::-webkit-scrollbar-thumb{background-color:#D0D0D0;}
-::-webkit-scrollbar-thumb:active{background-color:#C0C0C0;}
-::-webkit-scrollbar-track{background-color:#FCF7FF;}
-::-webkit-scrollbar-corner{background-color:transparent;}
-
-#Header{
-	display:block;
-	width:80%;
-	width:80vw;
-	/*width:calc(80% - 1em);/**/
-	margin-bottom:0;
-	margin-left:0;
-	margin-top:0;
-	padding-left:1em;
-	background-color:#FF7777;
-	color:white;
-	text-shadow:0 0 1px rgba(100,0,0,0.5);
-	clip-path:polygon(0% 0%, 100% 0%, 100% calc(100% - 0.25em), calc(100% - 0.25em) 100%, 0% 100%); /* Not supported in IE/Edge */
-}
-#Header > a{
-	color:white;
-}
-#Sidebar{
-    position: sticky;
-	display:inline-block;
-    top:0;
-	width:15%;
-	margin-left:0;
-	padding-bottom:0.5em;
-	background-color:#FFEECC;
+	padding-bottom:3em;
+	background-color:#F5EBFF;
 	text-align:center;
-	overflow:visible;
-	float:left;
+	font-family:'Roboto', Arial, sans-serif;
+	margin:0;
 }
-#Sidebar > ul{margin:0; text-align:left;}
-#Sidebar a{margin-right:1em;}
-ul{margin-bottom:0;}
-h2{margin-top:0.25em;}
-a{text-decoration:none; color:blue;}
-h1 a{text-decoration:none; color:#0066CC;}
-a:hover{text-decoration:underline;}
-a:active{color:#ff1600;}
-h1 a:active{color:red;}
+#header{
+	max-height:80vh;
+	max-width:80vw;
+}
+/*#sidebar{
+	position:fixed;
+	top:25%;
+	right:0;
+	font-size:0;
+}
+#sidebar > .fab{
+	display:block;
+	color:white;
+	padding:8px;
+	text-decoration:none;
+	font-size:0;
+}
+#sidebar > .fab:before{font-size:48px;}
+#sidebar > .fab:first-child{border-radius:8px 0 0 0;}
+#sidebar > .fab:last-child{border-radius:0 0 0 8px;}
 
-div.content{
-	width:80%;
-	margin:2em auto 1em auto;
+#sidebar > .fa-stack-overflow{background-color:#FF9900;}
+#sidebar > .fa-github{background-color:#404040; color:#FFFFFF;}
+#sidebar > .fa-reddit{background-color:#FF5700;}*/
+
+#githubLink{
+	position:fixed;
+	right:0;
+	bottom:0;
+	font-size:3em;
+	color:rgba(0,0,0,0.2);
+	text-decoration:none;
+	transition:color 0.2s ease-in-out;
+}
+#githubLink:hover{color:black;}
+
+
+#content{
+	min-height:100vh;
+	width:calc(80% - 2em);
+	box-shadow:2px 2px 3px rgb(0,0,0,0.2);
+	border-radius:0 0 3px 3px;
+	margin:auto;
+	padding:1em;
+	background-color:white;
+	text-align:left; /* Just in case "justify" isn't supported */
+	text-align:justify;
+	line-height:1.5em;
+}
+
+#footer{
+	margin-top:3em;
+	margin-bottom:-3em;
+}
+#footer a{
+	display:flex;
 	padding:0.5em;
-	padding-bottom:1em;
-	background-color:#FCF7FF;
-	color:#101010;
-	border-radius:5px;
-	box-shadow:2px 3px 2px rgba(16,16,16,0.1);
-	border:1px solid #EDECF1;
+	color:black;
+	text-decoration:none;
 }
-/* Absolute shenanigans, but it works */
-#Sidebar ~ div.content{width:65%;}
-div.content > p:last-child{margin-bottom:0;}
-
-h2 > a{
-	display:none;
-	outline:none;
-	padding:0 6px 0 6px;
-	margin:0 -6px 0 -6px;
-}
-h2:hover > a{display:inline;}
-
-code{
-	margin:0 0.25em 0 0.25em;
-	padding:0 0.5em 0 0.5em;
-	background-color:rgba(32,32,32,0.1)
+#footer i{
+	width:33.333%;
+	flex-grow:1;
 }
 
-.info{
-	cursor:help;
-	padding:0 4px 0 4px;
-	margin:0 -4px 0 -4px;
-}
+a{color:blue; text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:active{color:red;}
 
-#terribleJoke{
-	margin-top:20vh;
-	margin-bottom:0;
-	text-align:right;
-	color:#CCC7CF;
-	font-family:Courier New;
+@media (max-width:800px){
+	#content{
+		width:calc(100% - 2em);
+		margin:0;
+	}
+	/*#sidebar{
+		display:flex;
+		top:initial;
+		width:100%;
+		bottom:0;
+		left:0;
+	}
+	#sidebar > .fab{
+		display:inline-block;
+		flex-grow:1;
+	}
+	#sidebar > .fab:first-child{border-radius:8px 0 0 0;}
+	#sidebar > .fab:last-child{border-radius:0 8px 0 0;}*/
 }
