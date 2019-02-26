@@ -9,27 +9,6 @@ body{
 	max-height:80vh;
 	max-width:80vw;
 }
-/*#sidebar{
-	position:fixed;
-	top:25%;
-	right:0;
-	font-size:0;
-}
-#sidebar > .fab{
-	display:block;
-	color:white;
-	padding:8px;
-	text-decoration:none;
-	font-size:0;
-}
-#sidebar > .fab:before{font-size:48px;}
-#sidebar > .fab:first-child{border-radius:8px 0 0 0;}
-#sidebar > .fab:last-child{border-radius:0 0 0 8px;}
-
-#sidebar > .fa-stack-overflow{background-color:#FF9900;}
-#sidebar > .fa-github{background-color:#404040; color:#FFFFFF;}
-#sidebar > .fa-reddit{background-color:#FF5700;}*/
-
 #githubLink{
 	position:fixed;
 	right:0;
@@ -40,7 +19,6 @@ body{
 	transition:color 0.2s ease-in-out;
 }
 #githubLink:hover{color:black;}
-
 
 #content{
 	min-height:100vh;
@@ -53,6 +31,12 @@ body{
 	text-align:left; /* Just in case "justify" isn't supported */
 	text-align:justify;
 	line-height:1.5em;
+}
+
+span.info[title]{
+	cursor:help;
+	text-decoration:underline;
+	text-decoration-style:dotted;
 }
 
 #footer{
@@ -79,17 +63,41 @@ a:active{color:red;}
 		width:calc(100% - 2em);
 		margin:0;
 	}
-	/*#sidebar{
-		display:flex;
-		top:initial;
-		width:100%;
-		bottom:0;
-		left:0;
-	}
-	#sidebar > .fab{
-		display:inline-block;
-		flex-grow:1;
-	}
-	#sidebar > .fab:first-child{border-radius:8px 0 0 0;}
-	#sidebar > .fab:last-child{border-radius:0 8px 0 0;}*/
+}
+#navbar, #contactInfo{
+	display:flex;
+	flex-wrap:wrap;
+	width: 80%;
+	margin: auto;
+}
+
+#navbar a {
+	flex:1 0;
+	min-width:32%;
+	color: white;
+	background-color: #703d3d;
+	padding: 4px;
+}
+#navbar a:active{
+	background-color:#5f3434;
+}
+
+img.ex{
+	display:block;
+	margin:5px auto;
+	max-width:70%;
+	max-height:80vh;
+	background-color:rgba(0,0,0,0.03);
+	border:5px outset #703d3d;
+}
+
+#contactInfo > div{
+	flex:1 0;
+	text-align:center;
+	min-width:31%;
+	margin:1%;
+}
+#contactInfo i{
+	font-size:2em;
+	color:black;
 }
