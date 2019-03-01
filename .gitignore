@@ -1,3 +1,7 @@
 /junk
 /.vs
 TEMPLATE.html
+main.css.map
+mainOLD.css
+*.scss
+*.map
