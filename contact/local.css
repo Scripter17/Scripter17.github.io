@@ -1,0 +1,17 @@
+/* /contact */
+#contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto; }
+  #contactInfo > div {
+    flex: 1 0;
+    text-align: center;
+    min-width: 31%;
+    margin: 1%; }
+  #contactInfo i {
+    font-size: 4em;
+    color: black; }
+  #contactInfo a {
+    display: inline-block;
+    max-width: 100%; }

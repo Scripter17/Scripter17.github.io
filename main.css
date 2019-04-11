@@ -1,156 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
 body {
-	margin: 0;
-	padding-bottom: 3em;
-	background-color: #F5EBFF;
-	font-family: 'Roboto', Arial, sans-serif;
-	text-align: center;
-}
+  margin: 0;
+  padding-bottom: 3em;
+  background-color: #F5EBFF;
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: center; }
 
 #header {
-	max-height: 80vh;
-	max-width: 80vw;
-}
+  max-height: 80vh;
+  max-width: 80vw; }
 
 #themeChange {
-	display: inline-block;
-	position: fixed;
-	top: 0;
-	right: 0;
-}
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 0; }
 
 #themeChange i {
-	font-size: 24px;
-}
+  font-size: 24px; }
 
 #navbar {
-	margin: auto;
-	width: 80%;
-	display: flex;
-	flex-wrap: wrap;
-}
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap; }
 
 #navbar a {
-	padding: 4px;
-	flex: 1 0;
-	min-width: 32%;
-	color: white;
-	background-color: #703d3d;
-}
+  padding: 4px;
+  flex: 1 0;
+  min-width: 32%;
+  color: white;
+  background-color: #703d3d; }
 
 #navbar a:active {
-	background-color: #5f3434;
-}
+  background-color: #5f3434; }
 
-#navbar
 #navbar a:active {
-	background-color: #5f3434;
-}
+  background-color: #5f3434; }
 
 #content {
-	margin: auto;
-	padding: 1em;
-	min-height: 100vh;
-	width: calc(80% - 2em);
-	border-radius: 0 0 3px 3px;
-	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-	background-color: white;
-	text-align: left;
-	/* Just in case "justify" isn't supported */
-	text-align: justify;
-	line-height: 1.5em;
-}
-
-@media (max-width: 800px) {
-	#content {
-		margin: 0;
-		width: calc(100% - 2em);
-	}
-	#navbar {
-		margin: 0;
-		width: 100%;
-	}
-}
+  margin: auto;
+  padding: 1em;
+  min-height: 100vh;
+  width: calc(80% - 2em);
+  border-radius: 0 0 3px 3px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  text-align: left;
+  /* Just in case "justify" isn't supported */
+  text-align: justify;
+  line-height: 1.5em; }
 
 /* Stuff inside of #content */
 span.info[title] {
-	text-decoration: underline;
-	cursor: help;
-}
+  text-decoration: underline;
+  cursor: help; }
 
 a {
-	color: blue;
-	text-decoration: none;
-}
+  color: blue;
+  text-decoration: none; }
 
 a:hover {
-	text-decoration: underline;
-}
+  text-decoration: underline; }
 
 a:active {
-	color: red;
-}
+  color: red; }
 
 img.ex {
-	margin: 5px auto;
-	display: block;
-	max-height: 80vh;
-	max-width: 70%;
-	border: 5px outset #703d3d;
-	background-color: rgba(0, 0, 0, 0.03);
-}
+  margin: 5px auto;
+  display: block;
+  max-height: 80vh;
+  max-width: 70%;
+  border: 5px outset #703d3d;
+  background-color: rgba(0, 0, 0, 0.03); }
 
 #githubLink {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	font-size: 3em;
-	color: rgba(0, 0, 0, 0.2);
-	text-decoration: none;
-	transition: color 0.2s ease-in-out;
-}
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out; }
 
 #githubLink:hover {
-	color: black;
-}
+  color: black; }
 
 /* Footer stuff */
 #footer {
-	margin-top: 3em;
-	margin-bottom: -3em;
-}
+  margin-top: 3em;
+  margin-bottom: -3em; }
 
 #footer a {
-	display: flex;
-	padding: 0.5em;
-	color: black;
-	text-decoration: none;
-}
+  display: flex;
+  padding: 0.5em;
+  color: black;
+  text-decoration: none; }
 
 #footer i {
-	width: 33.333%;
-	flex-grow: 1;
-}
+  width: 33.333%;
+  flex-grow: 1; }
 
-/* /contact */
-#contactInfo {
-	display: flex;
-	flex-wrap: wrap;
-	width: 80%;
-	margin: auto;
-}
+/* 2019-03-10: I got a phone and now realize how broken the CSS is */
+@media (orientation: portrait) {
+  body {
+    font-size: 1.55em; }
+  #header {
+    width: 100%; }
+  #content {
+    width: calc(100% - 0.75em);
+    margin: 0; }
+  #navbar {
+    width: 100%;
+    margin: 0; }
+  #navbar a {
+    min-width: 100%;
+    font-size: 1.25em;
+    padding: 0.5em; }
+  #githubLink, #themeChange i {
+    font-size: 6em; } }
 
-#contactInfo > div {
-	flex: 1 0;
-	text-align: center;
-	min-width: 31%;
-	margin: 1%;
-}
-
-#contactInfo i {
-	font-size: 4em;
-	color: black;
-}
-
-#contactInfo a {
-	display: inline-block;
-}
+@media (max-height: 6in) {
+  #githubLink, #themeChange i {
+    font-size: 4em; }
+  #footer a {
+    padding: 1.5em; } }
