@@ -1,3 +1,6 @@
+window.pagecache={}
+window.navbarcache=null;
+
 window.onload=function(){
 	// Handle themes
 	if (localStorage.getItem("theme")==undefined){
@@ -22,29 +25,44 @@ window.onload=function(){
 }
 
 function handleHash(){
-	var request=new XMLHttpRequest();
-	request.addEventListener("load", function(){
-		var html=this.responseText;
-		document.getElementById("main-wrapper").innerHTML=html;
-	})
-	request.open("GET", "pages/"+window.location.hash.substr(1, window.location.hash.length-1)+".html");
-	request.send();
+	var setContent=function(){
+		document.getElementById("main-wrapper").innerHTML=pagecache[window.location.hash];
+	}
+	if (pagecache[window.location.hash]===undefined){
+		var request=new XMLHttpRequest();
+		request.addEventListener("load", function(){
+			pagecache[window.location.hash]=this.responseText;
+			setContent();
+		})
+		request.open("GET", "pages/"+window.location.hash.substr(1, window.location.hash.length-1)+".html");
+		request.send();
+	} else {
+		setContent();
+	}
 	handleNavbar();
 }
+
 function handleNavbar(){
 	// Handle the navigation elements
-	var navbar=document.getElementById("navbar");
-	var navHttp=new XMLHttpRequest();
-	navHttp.addEventListener("load", function(){
+	var setNavbar=function(){
+		var navbar=document.getElementById("navbar");
 		navbar.innerHTML="";
-		var navJSON=JSON.parse(this.responseText), i;
-		for (var i in navJSON){
+		for (i in navbarcache){
 			if (window.location.hash!=i){
-				navbar.innerHTML+="<a href='"+i+"'>"+navJSON[i]+"</a>";
+				navbar.innerHTML+="<a href='"+i+"'>"+navbarcache[i]+"</a>"
 			}
 		}
-	})
-	navHttp.open("GET", "map.json");
-	navHttp.send();
+	}
+	if (navbarcache===null){
+		var navHttp=new XMLHttpRequest();
+		navHttp.addEventListener("load", function(){
+			navbarcache=JSON.parse(this.responseText);
+			setNavbar();
+		})
+		navHttp.open("GET", "map.json");
+		navHttp.send();
+	} else {
+		setNavbar();
+	}
 }
 window.onhashchange=handleHash;

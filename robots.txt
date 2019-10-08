@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /Images/
+Disallow: /pages/
 Disallow: main.css
 Disallow: main.js
