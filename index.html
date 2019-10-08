@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="The website of James C. Wise">
@@ -10,6 +10,16 @@
 	<link rel="stylesheet" href="/main.css">
 	<link rel="stylesheet" href="/dark.css">
 	<script src="/main.js"></script>
+	<script>
+		window.addEventListener("load", function(){
+			// Personalized time-based greeting (defaults to "Hello")
+			var t=new Date().getHours();
+			var e=document.getElementById("Greeting");
+			if (18<=t || t<=4){e.innerHTML="Good evening";} // 6pm - 4am
+			if (5<=t && t<=12){e.innerHTML="Good morning";} // 5am - 12pm
+			if (13<=t && t<=17){e.innerHTML="Good afternoon";} // 1pm - 5pm
+		})
+	</script>
 </head>
 <body id="top">
 	<a href="https://scripter17.github.io/"><img id="header" src="/Images/Header.png"></a>
@@ -18,15 +28,14 @@
 		<i class="fas fa-sun showDark" id="themeLight"></i>
 	</div>
 	<div id="navbar">
-		<a href="/contact">Contact me</a>
+		<!--<a href="/contact">Contact me</a>
 		<a href="/experience">Experience</a>
-		<a href="/GIMP">GIMP/Photoshop examples</a>
+		<a href="/GIMP">GIMP/Photoshop examples</a>-->
 	</div>
 	<div id="content">
-		<p>Hello, my name is James Wise! I'm a Canadian high-school student planning to go into computer programming and/or web development in the future.
-		My main skills are Python 3, HTML, JavaScript, and CSS, but I've also dabbled in languages like AutoHotKey and Batch.</p>
-		<p>Most of the programs I make are simple one-purpose tools for things such as editing the windows file context menu.</p>
-
+		<p><span id="Greeting">Hello</span>! My name is James Wise! I am a hobbyist programmer currently in 12<sup>th</sup> grade at Hillcrest High School.</p>
+		<p>My main interests are math and programming, with a fair bit of experience in both for someone of my age.<br/>
+		Most of my projects are tools and proof of examples. Sometimes I make tools to help with a videogame I like, and sometimes it's a tool to replace the already available ones.</p>
 	</div>
 	<a id="githubLink" target="_blank" href="https://github.com/Scripter17/Scripter17.github.io" class="fab fa-github"></a>
 	<div id="footer">
