@@ -1,128 +1,155 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
-body {
-  margin: 0;
-  padding-bottom: 3em;
-  background-color: #F5EBFF;
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center; }
+body{
+	margin: 0;
+	position: relative;
+	min-height:100vh;
+	background-color: #F5EBFF;
+	font-family: 'Roboto', Arial, sans-serif;
+	text-align: center;
+}
 
-#header {
-  max-height: 80vh;
-  max-width: 80vw; }
+#header{
+	max-height: 80vh;
+	max-width: 80vw;
+}
 
-#themeChange {
-  display: inline-block;
-  position: fixed;
-  top: 0;
-  right: 0; }
+#themeChange{
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
 
-#themeChange i {
-  font-size: 24px; }
+#themeChange i{
+	font-size: 24px;
+}
 
-#navbar {
-  margin: auto;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap; }
+#navbar{
+	margin: auto;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+}
 
-#navbar a {
-  padding: 4px;
-  flex: 1 0;
-  min-width: 32%;
-  color: white;
-  background-color: #703d3d; }
+#navbar a{
+	padding: 4px;
+	flex: 1 0;
+	min-width: 32%;
+	color: white;
+	background-color: #703d3d;
+}
 
-#navbar a:active {
-  background-color: #5f3434; }
+#navbar a:active{
+	background-color: #5f3434;
+}
 
-#navbar a:active {
-  background-color: #5f3434; }
+#navbar a:active{
+	background-color: #5f3434;
+}
 
-#content {
-  margin: auto;
-  padding: 1em;
-  min-height: 100vh;
-  width: calc(80% - 2em);
-  border-radius: 0 0 3px 3px;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  text-align: left;
-  /* Just in case "justify" isn't supported */
-  text-align: justify;
-  line-height: 1.5em; }
+#content{
+	margin: auto;
+	padding: 1em;
+	min-height: 100vh;
+	width: calc(80% - 2em);
+	border-radius: 0 0 3px 3px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+	background-color: white;
+	text-align: left;
+	/* Just in case "justify" isn't supported */
+	text-align: justify;
+	line-height: 1.5em;
+}
 
 /* Stuff inside of #content */
-span.info[title] {
-  text-decoration: underline;
-  cursor: help; }
+span.info[title]{
+	text-decoration: underline;
+	cursor: help;
+}
 
-a {
-  color: blue;
-  text-decoration: none; }
+a{
+	color: blue;
+	text-decoration: none;
+}
 
-a:hover {
-  text-decoration: underline; }
+a:hover{
+	text-decoration: underline;
+}
 
-a:active {
-  color: red; }
+a:active{
+	color: red;
+}
 
-img.ex {
-  margin: 5px auto;
-  display: block;
-  max-height: 80vh;
-  max-width: 70%;
-  border: 5px outset #703d3d;
-  background-color: rgba(0, 0, 0, 0.03); }
+img.ex{
+	margin: 5px auto;
+	display: block;
+	max-height: 80vh;
+	max-width: 70%;
+	border: 5px outset #703d3d;
+	background-color: rgba(0, 0, 0, 0.03);
+}
 
-#githubLink {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  font-size: 3em;
-  color: rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  transition: color 0.2s ease-in-out; }
+#githubLink{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	font-size: 3em;
+	color: rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
 
-#githubLink:hover {
-  color: black; }
+#githubLink:hover{
+	color: black;
+}
 
 /* Footer stuff */
-#footer {
-  margin-top: 3em;
-  margin-bottom: -3em; }
+#footer{
+	cursor:pointer;
+	position:absolute;
+	bottom:-3em;
+	width:100%;
+	color: black;
+	text-decoration: none;
+	text-align:center;
+}
 
-#footer a {
-  display: flex;
-  padding: 0.5em;
-  color: black;
-  text-decoration: none; }
-
-#footer i {
-  width: 33.333%;
-  flex-grow: 1; }
+#footer i{
+	width: 33%;
+}
 
 /* 2019-03-10: I got a phone and now realize how broken the CSS is */
-@media (orientation: portrait) {
-  body {
-    font-size: 1.55em; }
-  #header {
-    width: 100%; }
-  #content {
-    width: calc(100% - 0.75em);
-    margin: 0; }
-  #navbar {
-    width: 100%;
-    margin: 0; }
-  #navbar a {
-    min-width: 100%;
-    font-size: 1.25em;
-    padding: 0.5em; }
-  #githubLink, #themeChange i {
-    font-size: 6em; } }
+@media (orientation: portrait){
+	body{
+		font-size: 1.55em;
+	}
+	#header{
+		width: 100%;
+	}
+	#content{
+		width: calc(100% - 0.75em);
+		margin: 0;
+	}
+	#navbar{
+		width: 100%;
+		margin: 0;
+	}
+	#navbar a{
+		min-width: 100%;
+		font-size: 1.25em;
+		padding: 0.5em;
+	}
+	#githubLink, #themeChange i{
+		font-size: 6em;
+	}
+}
 
-@media (max-height: 6in) {
-  #githubLink, #themeChange i {
-    font-size: 4em; }
-  #footer a {
-    padding: 1.5em; } }
+@media (max-height: 6in){
+	#githubLink, #themeChange i{
+		font-size: 4em;
+	}
+	#footer a{
+		padding: 1.5em;
+	}
+}
