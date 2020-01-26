@@ -23,19 +23,22 @@ body{
 	display: block;
 }
 .content{
-	margin:1em;
+	margin-bottom:1em;
 	background-color:var(--cont-bg);
 	border-radius:1em;
 	width:calc(70% - 2em);
 	padding:1em;
 	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
 }
+#navigation + .content{
+	border-radius:0 0 1em 1em;
+}
 
-.fade-in{animation:fade-in 0.75s ease-out;}
+/*.fade-in{animation:fade-in 0.75s ease-out;}
 @keyframes fade-in{
 	0%{transform: translateY(-3em); opacity: 0;}
 	100%{transform: translateY(0); opacity: 1;}
-}
+}/**/
 
 #footer{
 	position: fixed;
@@ -63,13 +66,6 @@ a:active{color:red;}
 #footer-links i.fa-bitcoin:hover{color:var(--hov-btc);}
 #footer-links i.fa-twitter:hover{color:var(--hov-twitter);}
 
-@media(max-width:600px){
-	.content{
-		width:calc(90% - 2em);
-	}
-	#sidebar{--width:60%;}
-}
-
 .h-center{
 	left:0;
 	right:0;
@@ -80,25 +76,31 @@ a:active{color:red;}
 #debug{position: absolute; top:0; right:0; /*color:rgba(0,0,0,0.1);/**/}
 body.debug *{outline:1px solid black;}
 
-/*#sidebar{
-	--side-width:30%;
-	background-color:pink;
-	position: fixed;
-	width:var(--side-width);
-	top:0;
-	left:calc(0% - var(--side-width));
-	height:100%;
-	transition:left 0.2s ease-in-out;
-}
-#sidebar:hover{
+#navigation{
+	width:calc(70%);
 	left:0;
+	right:0;
+	margin:0 auto;
+	display:flex;
+	border-radius:1em 1em 0 0;
+	flex-wrap:wrap;
+	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
+	overflow:hidden;
 }
-#side-nub{
-	position: absolute;
-	display: inline-block;
-	top:0;
-	right:-2em;
-	width:2em;
-	height:2em;
-	background-color: blue;
-}*/
+#navigation a{
+	color:white;
+	text-align:center;
+	padding:0.2em;
+	flex:1 0 calc(50% - 0.4em);
+	background-color:#703d3d;
+	transition:background-color 0.2s ease-in-out;
+}
+#navigation a:active{
+	background-color:#602d2d;
+}
+
+@media(max-device-width:600px){
+	.content{width:calc(98% - 2em);}
+	#navigation{width:98%;}
+	#navigation a{flex-basis:calc(100% - 0.4em);}
+}
