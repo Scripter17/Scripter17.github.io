@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
+
+:root{
+	--body-bg:#F5EBFF;
+	--cont-bg:#FFFFFF;
+	--text-col:#000000;
+	--hov-btc:#FF9900;
+	--hov-twitter:#00ACED;
+}
+
+html, body{background-color:var(--body-bg);}
+body{
+	color:var(--text-col);
+	font-size:16px;
+	margin:0 0 4em;
+	text-align:justify;
+	font-family: 'Roboto', Times New Roman, Arial, sans-serif;
+}
+
+#header{
+	max-width:80%;
+	display: block;
+}
+.content{
+	margin-bottom:1em;
+	background-color:var(--cont-bg);
+	border-radius:1em;
+	width:calc(70% - 2em);
+	padding:1em;
+	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
+}
+#navigation + .content{
+	border-radius:0 0 1em 1em;
+}
+
+/*.fade-in{animation:fade-in 0.75s ease-out;}
+@keyframes fade-in{
+	0%{transform: translateY(-3em); opacity: 0;}
+	100%{transform: translateY(0); opacity: 1;}
+}/**/
+
+#footer{
+	position: fixed;
+	bottom:0;
+	width:100%;
+	font-size:2em;
+	height:1.25em;
+	line-height: 1em;
+	background-color:var(--body-bg);
+}
+#footer-links{
+	width:60%;
+	height:100%;
+	align-items:center;
+	display:flex;
+	justify-content: space-around;
+}
+#footer-links a{color:var(--text-col); height:1em;}
+
+
+a{color:blue; text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:active{color:red;}
+#footer-links i{transition: color 0.25s;}
+#footer-links i.fa-bitcoin:hover{color:var(--hov-btc);}
+#footer-links i.fa-twitter:hover{color:var(--hov-twitter);}
+
+.h-center{
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#debug{position: absolute; top:0; right:0; /*color:rgba(0,0,0,0.1);/**/}
+body.debug *{outline:1px solid black;}
+
+#navigation{
+	width:calc(70%);
+	left:0;
+	right:0;
+	margin:0 auto;
+	display:flex;
+	border-radius:1em 1em 0 0;
+	flex-wrap:wrap;
+	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
+	overflow:hidden;
+}
+#navigation a{
+	color:white;
+	text-align:center;
+	padding:0.2em;
+	flex:1 0 calc(50% - 0.4em);
+	background-color:#703d3d;
+	transition:background-color 0.2s ease-in-out;
+}
+#navigation a:active{
+	background-color:#602d2d;
+}
+
+@media(max-device-width:600px){
+	.content{width:calc(98% - 2em);}
+	#navigation{width:98%;}
+	#navigation a{flex-basis:calc(100% - 0.4em);}
+}
