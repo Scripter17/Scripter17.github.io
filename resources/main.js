@@ -1,16 +1,7 @@
-/*var sidebarLinks={
-	"Home":"/",
-	"About":"/About",
-	"Contact":"/Contact"
-};
-window.addEventListener("load", function(){
-	var link, shtml="", sidebar;
-	document.body.innerHTML+="<div id='sidebar'><div id='side-nub'></div></div>"
-	sidebar=document.getElementById("sidebar");
-	shtml+="<ul>"
-	for (link in sidebarLinks){
-		shtml+="<li><a href='"+sidebarLinks[link]+"'>"+link+"</a></li>"
+window.onload=function(){
+	var sections=document.querySelectorAll(".content[id] > h2:first-child"),
+		i;
+	for (i in sections){
+		sections[i].innerHTML+="<a class='anchor' href='#"+sections[i].parentElement.getAttribute("id")+"'>#</a>"
 	}
-	shtml+="</ul>"
-	sidebar.innerHTML+=shtml
-});*/
+}

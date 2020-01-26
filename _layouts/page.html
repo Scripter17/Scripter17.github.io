@@ -6,16 +6,16 @@
 	<meta name="description" content="The website of James C. Wise">
 	<meta name="keywords" content="Web Developer, Web Dev, James, James Wise, James C Wise, James Christopher Wise, Python Developer, Python dev, Scripter17, Scripter171, JamesTMCA">
 	<meta name="author" content="James C. Wise">
-	<title>James Wise's Website</title>
-	<link rel="shortcut icon" type="image/ico" href="resources/icon.ico">
-	<link rel="stylesheet" href="resources/main.css">
-	<script src="resources/main.js"></script>
+	<title>James Wise's Website | {{ page.html-title }}</title>
+	<link rel="shortcut icon" type="image/ico" href="/resources/icon.ico">
+	<link rel="stylesheet" href="/resources/main.css">
+	<script src="/resources/main.js"></script>
 </head>
 <body>
 <span id="debug" onclick="document.body.classList.toggle('debug')"><i class="fa fa-wrench"></i></span>
 
-<img src="resources/header.png" id="header" class="h-center">
-<div id="navigation">
+<img src="/resources/header.png" id="header" class="h-center">
+<div id="navigation" class="h-center">
 	{% for post in site.posts %}
         <a href="{{ post.url }}">{{ post.title }}</a>
 	{% endfor %}
