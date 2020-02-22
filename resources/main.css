@@ -15,10 +15,11 @@
 html, body{background-color:var(--body-bg);}
 body{
 	margin:0 0 4em;
-	color:var(--text-col);
-	font-family: 'Roboto', Times New Roman, Arial, sans-serif;
 	font-size:16px;
+	font-family: 'Roboto', Times New Roman, Arial, sans-serif;
 	text-align:justify;
+	color:var(--text-col);
+	word-break:break-word;
 }
 /* Global stuff */
 .h-center{
@@ -36,6 +37,7 @@ body.debug *{outline:1px solid black;}
 #header{
 	display: block;
 	max-width:var(--content-width);
+	max-height:256px;
 }
 /* Navigation stuff */
 #navigation{
@@ -48,24 +50,24 @@ body.debug *{outline:1px solid black;}
 }
 #navigation a{
 	flex:1 0 calc(50% - 0.4em);
+	transition:background-color 0.1s ease-in-out;
 	padding:0.2em;
 	padding-bottom: 0;
-	color:white;
-	text-align:center;
 	background-color:var(--nav-bg);
-	transition:background-color 0.2s ease-in-out;
+	text-align:center;
+	color:white;
 }
 #navigation a:active{
 	background-color:var(--nav-bg-hov);
 }
 /* Content stuff */
 .content{
+	margin-bottom:1em;
+	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
+	border-radius:1em;
 	width:calc(var(--content-width) - 2em);
 	padding:1em;
-	margin-bottom:1em;
 	background-color:var(--cont-bg);
-	border-radius:1em;
-	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
 }
 .content[id]{border-top:1em solid var(--nav-bg);}
 #navigation + .content{border-radius:0 0 1em 1em;}

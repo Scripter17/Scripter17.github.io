@@ -8,16 +8,16 @@
 	<meta name="author" content="James C. Wise">
 	<title>James Wise's Website | {{ page.html-title }}</title>
 	<link rel="shortcut icon" type="image/ico" href="/resources/icon.ico">
-	<link rel="stylesheet" href="/resources/main.css">
-	<script src="/resources/main.js"></script>
+	<link rel="stylesheet" href="resources/main.css">
+	<script src="resources/main.js"></script>
 </head>
 <body>
 <span id="debug" onclick="document.body.classList.toggle('debug')"><i class="fa fa-wrench"></i></span>
 
-<img src="/resources/header.png" id="header" class="h-center">
+<img src="resources/header.png" id="header" class="h-center">
 <div id="navigation" class="h-center">
 	{% for post in site.posts %}
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url }}">{{ post.html-title }}</a>
 	{% endfor %}
 </div>
 {{ content }}
@@ -25,7 +25,7 @@
 	<span id="footer-links" class="h-center">
 		<a href="bitcoin:bc1qqms0x03ugq348j5gvgv6vkn76hjs7n5tm8pwk7"><i class="fab fa-bitcoin"></i></a>
 		<a href="mailto:jameschristopherwise@gmail.com"><i class="fa fa-envelope"></i></a>
-		<a href="https://twitter.com/Scripter171" target="_blank"><i class="fab fa-twitter"></i></a>
+		<!--<a href="https://twitter.com/Scripter171" target="_blank"><i class="fab fa-twitter"></i></a>-->
 		<a href="https://github.com/Scripter17/Scripter17.github.io" target="_blank"><i class="fab fa-github"></i></a>
 	</span>
 </div>
