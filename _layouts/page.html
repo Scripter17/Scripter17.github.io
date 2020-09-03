@@ -9,14 +9,15 @@
 	<title>James Wise's Website | {{ page.html-title }}</title>
 	<link rel="shortcut icon" type="image/ico" href="/resources/icon.ico">
 	<link rel="stylesheet" href="resources/main.css">
-	<script src="resources/main.js"></script>
+	<!--<script src="resources/main.js"></script>-->
 </head>
 <body>
 <span id="debug" onclick="document.body.classList.toggle('debug')"><i class="fa fa-wrench"></i></span>
 
 <img src="resources/header.png" id="header" class="h-center">
 <div id="navigation" class="h-center">
-	{% for post in site.posts %}
+	{% assign sorted = (site.posts | sort: 'permalink') %}
+	{% for post in sorted %}
         <a href="{{ post.url }}">{{ post.html-title }}</a>
 	{% endfor %}
 </div>
