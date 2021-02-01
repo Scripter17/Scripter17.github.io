@@ -9,7 +9,7 @@
 	<title>James Wise's Website | {{ page.html-title }}</title>
 	<link rel="shortcut icon" type="image/ico" href="/resources/icon.ico">
 	<link rel="stylesheet" href="resources/main.css">
-	<!--<script src="resources/main.js"></script>-->
+	<script src="resources/main.js"></script>
 </head>
 <body>
 <span id="debug" onclick="document.body.classList.toggle('debug')"><i class="fa fa-wrench"></i></span>
@@ -21,7 +21,9 @@
         <a href="{{ post.url }}">{{ post.html-title }}</a>
 	{% endfor %}
 </div>
-{{ content }}
+<div id="content-container">
+	{{ content }}
+</div>
 <div id="footer">
 	<span id="footer-links" class="h-center">
 		<a href="bitcoin:bc1qqms0x03ugq348j5gvgv6vkn76hjs7n5tm8pwk7"><i class="fab fa-bitcoin"></i></a>

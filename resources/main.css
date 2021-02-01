@@ -64,14 +64,18 @@ body.debug *{outline:1px solid black;}
 .content{
 	margin-bottom:1em;
 	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
-	border-radius:1em;
 	width:calc(var(--content-width) - 2em);
+	border-radius:0 0 1em 1em;
 	padding:1em;
 	background-color:var(--cont-bg);
 }
-.content[id]{border-top:1em solid var(--nav-bg);}
+/*.content[id]{border-top:1em solid var(--nav-bg);}
 #navigation + .content{border-radius:0 0 1em 1em;}
-#navigation + .content[id]{border-top-width:0.2em;}
+#navigation + .content[id]{border-top-width:0.2em;}*/
+.content:not(:first-child){
+	border-top:1em solid var(--nav-bg);
+	border-radius:1em;
+}
 .anchor{
 	vertical-align:top;
 	font-size:smaller;
