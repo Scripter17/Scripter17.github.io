@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
 
 :root{
 	--body-bg:#F5f0FF;
 	--cont-bg:#FFFFFF;
 	--text-col:#000000;
-	--hov-btc:#FF9900;
-	--hov-twitter:#00ACED;
 	--nav-bg:#703D3D;
 	--nav-bg-hov:#602D2D;
+	--nav-box-shadow:1px 2px 2px rgba(0,0,0,0.1);
+	--content-box-shadow:1px 2px 2px rgba(0,0,0,0.1);
 	--content-width:80%;
 }
 
@@ -27,7 +27,7 @@ body{
 	margin-right:auto;
 }
 a{color:blue; text-decoration:none;}
-a:hover{text-decoration:underline;}
+a:hover, a:focus{text-decoration:underline;}
 a:active{color:red;}
 /* Debug stuff */
 #debug{position: absolute; top:0; right:0; color:rgba(0,0,0,0.1);}
@@ -46,7 +46,7 @@ body.debug *{outline:1px solid black;}
 	overflow:hidden;
 	width:var(--content-width);
 	border-radius:1em 1em 0 0;
-	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
+	box-shadow:var(--nav-box-shadow);
 }
 #navigation a{
 	flex:1 0 calc(50% - 0.4em);
@@ -57,13 +57,13 @@ body.debug *{outline:1px solid black;}
 	text-align:center;
 	color:white;
 }
-#navigation a:active{
+#navigation a:active, #navigation a:focus{
 	background-color:var(--nav-bg-hov);
 }
 /* Content stuff */
 .content{
 	margin-bottom:1em;
-	box-shadow:1px 2px 2px rgba(0,0,0,0.1);
+	box-shadow:var(--content-box-shadow);
 	width:calc(var(--content-width) - 2em);
 	border-radius:0 0 1em 1em;
 	padding:1em;
@@ -72,7 +72,11 @@ body.debug *{outline:1px solid black;}
 /*.content[id]{border-top:1em solid var(--nav-bg);}
 #navigation + .content{border-radius:0 0 1em 1em;}
 #navigation + .content[id]{border-top-width:0.2em;}*/
-.content:not(:first-child){
+.content:first-child{
+	border-top-width:0.2em;
+	border-radius: 0 0 1em 1em;
+}
+.content{
 	border-top:1em solid var(--nav-bg);
 	border-radius:1em;
 }
@@ -100,9 +104,6 @@ body.debug *{outline:1px solid black;}
 	height:100%;
 }
 #footer-links a{color:var(--text-col); height:1em;}
-#footer-links i{transition: color 0.25s;}
-#footer-links i.fa-bitcoin:hover{color:var(--hov-btc);}
-#footer-links i.fa-twitter:hover{color:var(--hov-twitter);}
 /* Mobile stuff */
 @media(max-width:600px){
 	:root{--content-width:98%;}
