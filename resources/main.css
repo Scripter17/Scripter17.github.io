@@ -40,7 +40,10 @@ body.debug *{outline:1px solid black;}
 	display: block;
 	max-width:var(--content-width);
 	max-height:128px;
-	padding: 32px;
+	padding: 32px 0;
+}
+#header:-moz-suppressed{
+	display: none;
 }
 /* Navigation stuff */
 #navigation{
@@ -113,15 +116,23 @@ h2{
 #footer-links a:focus{color:var(--footer-link-focus-col);}
 /* Mobile stuff */
 @media(max-width:900px){
-	#header{max-height: 96px; padding: 16px;}
 	:root{--content-width:95%;}
-	#navigation a{flex-basis:calc(100% - 0.4em); padding: 0.4em 0;}
-	.anchor{display:inline;}
 	body{margin:0 0 6em;}
+	#header{max-height: 96px; padding: 32px 0;}
+	.anchor{display:inline; font-size:1em; padding: 0 1em; margin-left: -1em;}
+	ul{padding-left: 1em;}
 	#footer{height: 2em;}
 	#footer-links{width: 100%; font-size: 1.25em;}
+}
+@media(max-width: 4in){
+	#navigation a{flex-basis:calc(100% - 0.4em); padding: 0.2em 0;}
 }
 @media(max-width:400px){
 	:root{--content-width: 100%;}
 	.content{padding-left: 0.5em; padding-right: 1em; width: calc(var(--content-width) - 1.5em);}
+}
+@media(max-height:400px){
+	body{margin-bottom: 0;}
+	#header{max-height: 64px; padding: 16px 0;}
+	#footer{position: relative;}
 }
