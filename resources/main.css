@@ -6,10 +6,12 @@
 	--cont-bg:#FFFFFF;
 	--text-col:#000000;
 	--nav-bg:#703D3D;
-	--nav-bg-hov:#602D2D;
+	--nav-bg-focus:#501D1D;
 	--nav-box-shadow:1px 2px 2px rgba(0,0,0,0.1);
 	--content-box-shadow:1px 2px 2px rgba(0,0,0,0.1);
 	--content-width:80%;
+	--link-focus-col: red;
+	--footer-link-focus-col: blue;
 }
 
 html, body{background-color:var(--body-bg);}
@@ -28,7 +30,7 @@ body{
 }
 a{color:blue; text-decoration:none;}
 a:hover, a:focus{text-decoration:underline;}
-a:active{color:red;}
+a:active, a:focus{color:var(--link-focus-col);}
 /* Debug stuff */
 #debug{position: absolute; top:0; right:0; color:rgba(0,0,0,0.1);}
 #debug i{display:block;}
@@ -37,7 +39,8 @@ body.debug *{outline:1px solid black;}
 #header{
 	display: block;
 	max-width:var(--content-width);
-	max-height:256px;
+	max-height:128px;
+	padding: 32px;
 }
 /* Navigation stuff */
 #navigation{
@@ -58,7 +61,7 @@ body.debug *{outline:1px solid black;}
 	color:white;
 }
 #navigation a:active, #navigation a:focus{
-	background-color:var(--nav-bg-hov);
+	background-color:var(--nav-bg-focus);
 }
 /* Content stuff */
 .content{
@@ -66,8 +69,11 @@ body.debug *{outline:1px solid black;}
 	box-shadow:var(--content-box-shadow);
 	width:calc(var(--content-width) - 2em);
 	border-radius:0 0 1em 1em;
-	padding:1em;
+	padding:0.5em 1em 1em 1em;
 	background-color:var(--cont-bg);
+}
+h2{
+	margin: 0.6em 0;
 }
 /*.content[id]{border-top:1em solid var(--nav-bg);}
 #navigation + .content{border-radius:0 0 1em 1em;}
@@ -104,9 +110,18 @@ body.debug *{outline:1px solid black;}
 	height:100%;
 }
 #footer-links a{color:var(--text-col); height:1em;}
+#footer-links a:focus{color:var(--footer-link-focus-col);}
 /* Mobile stuff */
-@media(max-width:600px){
-	:root{--content-width:98%;}
-	#navigation a{flex-basis:calc(100% - 0.4em);}
+@media(max-width:900px){
+	#header{max-height: 96px; padding: 16px;}
+	:root{--content-width:95%;}
+	#navigation a{flex-basis:calc(100% - 0.4em); padding: 0.4em 0;}
 	.anchor{display:inline;}
+	body{margin:0 0 6em;}
+	#footer{height: 2em;}
+	#footer-links{width: 100%; font-size: 1.25em;}
+}
+@media(max-width:400px){
+	:root{--content-width: 100%;}
+	.content{padding-left: 0.5em; padding-right: 1em; width: calc(var(--content-width) - 1.5em);}
 }
