@@ -32,9 +32,10 @@ a{color:blue; text-decoration:none;}
 a:hover, a:focus{text-decoration:underline;}
 a:active, a:focus{color:var(--link-focus-col);}
 /* Debug stuff */
-#debug{position: absolute; top:0; right:0; color:rgba(0,0,0,0.1);}
-#debug i{display:block;}
-body.debug *{outline:1px solid black;}
+#debug{display:none;}
+#debug-button{position: absolute; top:0; left:0; color:rgba(0,0,0,0.1);}
+#debug-button i{display:block;}
+body:has(#debug:checked) *{outline:1px solid black;}
 /* Header stuff */
 #header{
 	display: block;
@@ -124,7 +125,7 @@ h2{
 	#footer{height: 2em;}
 	#footer-links{width: 100%; font-size: 1.25em;}
 }
-@media(max-width: 4in){
+@media(max-width: 6in){
 	#navigation a{flex-basis:calc(100% - 0.4em); padding: 0.2em 0;}
 }
 @media(max-width:400px){
