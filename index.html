@@ -1,6 +1,5 @@
 ---
 layout: main
-permalink: /
 title: "Home"
 ---
 <div class="content h-center" id="nav-about">
@@ -14,7 +13,7 @@ title: "Home"
 <div class="content h-center" id="nav-projects">
 	<h2>My best projects<a class="anchor" href="#nav-projects">#</a></h2>
 	<ul>
-		<li><a href="https://github.com/Scripter17/url-cleaner">URL Cleaner</a>, explicit non-consent to URL-based spyware such as <code>utm_*</code> query parameters.</li>
+		<li><a href="https://github.com/Scripter17/url-cleaner">URL Cleaner</a>, explicit non-consent to URL spytext.</li>
 		<li><a href="https://github.com/Scripter17/jrep">JREP</a>, a command line tool inspired by GREP and FINDSTR that is designed to be extremely versatile and useful.</li>
 		<li><a href="https://github.com/Scripter17/Minecraft-Hotkeys">Minecraft-Hotkeys</a>, a tool for Minecraft to make AFK fishing and some other things easier.</li>
 	</ul>
@@ -24,4 +23,10 @@ title: "Home"
   <h2>Contact info<a class="anchor" href="#contact">#</a></h2>
   Github: <a href="https://github.com/Scripter17">Scripter17</a><br/>
   Email: <a href="mailto:jameschristopherwise@gmail.com">jameschristopherwise@gmail.com</a>
+</div>
+
+<div class="content h-center" id="blog-posts">
+	<h2>Blog posts<a class="anchor" href="#blog-posts">#</a></h2>
+  {% for post in site.posts %}
+	<a href="{{ post.url }}">{{ post.title }}</a>{% endfor %}
 </div>
