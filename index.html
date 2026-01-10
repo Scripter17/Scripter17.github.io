@@ -1,6 +1,101 @@
 <!DOCTYPE html>
 <html>
-<body>
-  <h1>James C. Wise's website in test mode</h1>
-</body>
+  <head>
+    <title>James C. Wise</title>
+    <meta name="description" content="The website of James C. Wise">
+    <meta name="creator" content="James C. Wise">
+    <meta name="keywords" content="James Wise,James C. Wise,Scripter17,awabbagabu">
+    <meta name="color-scheme" content="light dark">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <style>
+      :root {
+        --bg: #111111;
+
+        --content-bg: #333333;
+        --content-border: #444444;
+
+        --text: #DDDDDD;
+        --link: #00FF00;
+        --link-active: #FF00FF;
+
+        @media (prefers-color-scheme: light) {
+          --bg: #EEEEEE;
+          --content-bg: #E8E8E8;
+          --content-border: #CCCCCC;
+
+          --text: #222222;
+          --link: #0000FF;
+          --link-active: #7f007f;
+        }
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+      }
+
+      header {
+        text-align: center;
+        padding: 1em;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0.5em;
+      }
+
+      .content {
+        background-color: var(--content-bg);
+
+        width: 90%;
+        margin: 0 5%;
+        padding: 0.5rem;
+
+        box-shadow: inset 0 0 0 3px var(--content-border);
+        border-radius: 5px;
+
+        &:not(:last-child) {
+          margin-bottom: 2em;
+        }
+      }
+
+      a {
+        color: var(--link);
+        &:active { color: var(--link-active); }
+
+        @media not (prefers-contrast: more) { text-decoration: none; }
+        &:hover, &:active, &:focus { text-decoration: underline; }
+
+        &.anchor { padding: 1ch; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="header">James C. Wise</h1>
+      <h3>he/him</h3>
+    </header>
+
+    <div class="content" id="content-about">
+      <h2 class="content-header"><a class="anchor" href="#content-about">#</a>About me</h2>
+      I'm an open source developer working mostly in Rust.
+    </div>
+
+    <div class="content" id="content-projects">
+      <h2 class="content-header"><a class="anchor" href="#content-projects">#</a>My projects</h2>
+      <ul>
+        <li><a href="https://github.com/Scripter17/url-cleaner">URL Cleaner</a> - Explicit nonconsent to URL spytext.</li>
+      </ul>
+    </div>
+
+    <div class="content" id="content-accounts">
+      <h2 class="content-header"><a class="anchor" href="#content-accounts">#</a>My accounts</h2>
+      <ul>
+        <li>Github: <a href="https://github.com/Scripter17">Scripter17</a></li>
+        <li>Bluesky: <a href="https://bsky.app/profile/awabbagabu.bsky.social">awabbagabu.bsky.social</a></li>
+      </ul>
+    </div>
+  </body>
 </html>
